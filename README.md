@@ -1,4 +1,4 @@
-<p align="center"><img width="20%" src="https://user-images.githubusercontent.com/110653581/211257489-34757022-4c71-443f-afe7-94d240788288.png"/></p>
+<p align="center"><img width="30%" src="https://user-images.githubusercontent.com/110653581/211257489-34757022-4c71-443f-afe7-94d240788288.png"/></p>
 
 # FarmFarm
 내 손으로 키운 작물, 손쉽게 거래하세요.<br>
@@ -12,7 +12,7 @@
 ![project](https://user-images.githubusercontent.com/110653581/223979355-d3890851-f2db-4714-810d-79bc305bc26e.png)
 
 ## ⏱️ 개발 기간
-2022년 10월 18일 ~ 2022년 12월 10일<br>
+2022년 12월 12일 ~ 2023년 1월 11일<br>
 ## 🧑‍🤝‍🧑 멤버 구성
 [6인 팀프로젝트]<br>
 - 서도은 -로그인, 회원가입, 아이디,비밀번호 찾기, 모달창, 모임가입,탈퇴
@@ -35,8 +35,7 @@
 - HTML/CSS
 - Javascript<br>
 ## 🏷️ ERD 설계
-![206644146-b63977b9-e8ad-45f6-9d72-66abfcdd1c95](https://user-images.githubusercontent.com/110653581/223964484-548b0925-ba84-4253-9c87-50971b6bee4e.png)
-ERD 주소 : https://www.erdcloud.com/d/rH52AGzEpuXjv7vir
+![216096409-23864202-486c-4dbb-a65f-9d7aebd232ad](https://user-images.githubusercontent.com/110653581/224001299-497bd7d9-0440-47d5-bd3d-0bf1c83c57dc.png)
 ## ⚙️ 핵심 기능
 <details markdown="1">
 <summary>접기/펼치기</summary>
