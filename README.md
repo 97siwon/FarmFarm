@@ -37,29 +37,52 @@
 ![216096409-23864202-486c-4dbb-a65f-9d7aebd232ad](https://user-images.githubusercontent.com/110653581/224001299-497bd7d9-0440-47d5-bd3d-0bf1c83c57dc.png)
 ERD 주소 : https://www.erdcloud.com/d/xpKBdcyyrs6Ef2k9F<br><br>
 ## ⚙️ 핵심 기능
-<details markdown="1">
-<summary>접기/펼치기</summary>
+- 구현 기능 및 기여
+  - 로그인, 회원가입 기능
+  - 아이디, 비밀번호 찾기 기능
+  - 개인정보 수정, 비밀번호 변경, 회원 탈퇴
+  - 레시피API
+   
+- ### 회원가입 기능
+  <details markdown="1">
+  <summary>접기/펼치기</summary>
 
-### 1. 모임 찾기 페이지<br>
-<img width="50%" src="https://user-images.githubusercontent.com/110653581/223965275-a06bc621-d33a-4f99-a003-0a4c7d38c096.png"/>
-<br>
-<br>
+  ### 1-1. 회원가입 <br>
+  <img width="40%" src="https://user-images.githubusercontent.com/110653581/224271664-c08fe935-c250-485c-9686-ee3a1d54458e.png"/>
+  <img width="40%" src="https://user-images.githubusercontent.com/110653581/224271687-82978d78-ffff-4ca6-9400-bedd8d3658ba.png"/><br>
+  
+  - 구매자, 판매자에 따라 회원가입 양식이 다름<br>
+  - 판매자의 경우 농장 인증 사진을 첨부하여 관리자의 승인을 받아야 가입 가능<br>
+  - 코드
+    - [Controller](https://github.com/97siwon/FarmFarm/blob/main/FarmFarm/src/main/java/edu/kh/farmfarm/member/controller/MemberController.java#L157)
 
-### 1-1. 카테고리 별 모임<br>
-<img width="50%" src="https://user-images.githubusercontent.com/110653581/223965549-2f7e511a-0e05-444c-94ee-063351748889.png"/><br>
-- 원하는 카테고리 선택 시 해당 카테고리 모임 추천 페이지로 이동<br>
-- 가나다 순으로 조회<br>
-- 코드
-  - [Controller](https://github.com/97siwon/bondProject/blob/f14332b1052756e5bb7b00ac9d012269103a4910/Bond/src/main/java/kh/semi/project/member/controller/findBondController.java#L36)
-
-### 1-2. 모임 검색<br>
-<img width="50%" src="https://user-images.githubusercontent.com/110653581/223965575-5e9dee7e-042e-4c7a-86fa-1b85acfee249.png"/><br>
-- 본드 이름, 소개글이 포함된 단어 검색 시 검색 결과 화면으로 이동<br>
-- 코드
-  - [Controller](https://github.com/97siwon/bondProject/blob/main/Bond/src/main/java/kh/semi/project/member/controller/SearchController.java#L29)
-  - [Sevice](https://github.com/97siwon/bondProject/blob/main/Bond/src/main/java/kh/semi/project/member/model/service/SearchServiceImpl.java#L20)
-<br>
-</details>
+    - [Service](https://github.com/97siwon/FarmFarm/blob/main/FarmFarm/src/main/java/edu/kh/farmfarm/member/model/service/MemberServiceImpl.java#L60)  
+  ### 1-2. 회원가입 유효성 검사 <br>
+  <img width="40%" src="https://user-images.githubusercontent.com/110653581/224277641-1ad061e9-1337-4879-93df-d4dd0ffac39f.png"/><br>
+  - 아이디, 비밀번호, 이름, 닉네임, 주소, 전화번호 인증 유효성 검사<br>
+  - 코드
+    - [JS](https://github.com/97siwon/FarmFarm/blob/main/FarmFarm/src/main/webapp/resources/js/member/signUp.js#L75)
+  ### 1-3. 주소 API <br>
+  - 코드
+    - [JS](https://github.com/97siwon/FarmFarm/blob/main/FarmFarm/src/main/webapp/resources/js/member/signUp.js#L42)
+  ### 1-4. CoolSMS API <br>
+  - 코드
+    - [JS](https://github.com/97siwon/FarmFarm/blob/main/FarmFarm/src/main/webapp/WEB-INF/views/member/signUp0.jsp#L171)
+  </details>
+- ### 레시피 API 기능
+  <details markdown="1">
+  <summary>접기/펼치기</summary>
+  <img width="50%" src="https://user-images.githubusercontent.com/110653581/224279515-ad6c40f1-d415-4e9a-b0b8-7d9d0a986b23.png"/><br>
+  
+  - 공공데이터 중 "농식품 식단관리(메뉴젠) 음식, 재료, 조리 및 이미지 정보" API를 이용하여 레시피 목록을 불러옴<br>
+  - 많은 정보 중 음식 번호, 이미지, 이름, 조리법만 출력<br>
+  - 비동기 페이지네이션 구현<br>
+  - 코드
+    - [Controller](https://github.com/97siwon/FarmFarm/blob/main/FarmFarm/src/main/java/edu/kh/farmfarm/api/controller/APIController.java#L22)
+    - [Service](https://github.com/97siwon/FarmFarm/blob/main/FarmFarm/src/main/java/edu/kh/farmfarm/api/service/APIServiceImpl.java#L48)
+    - [JSP](https://github.com/97siwon/FarmFarm/blob/main/FarmFarm/src/main/webapp/WEB-INF/views/recipe/recipe.jsp#L29)
+  <br>
+  </details>
 <br>
 <h2>💣 트러블 슈팅</h2>
 <h3> DB 전체 삭제</h3>
